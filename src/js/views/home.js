@@ -8,7 +8,7 @@ export const Home = () => (
 	<div className="px-3 mt-5">
           <h2 style= {{color: "red"}}>Characters</h2>
 		  <div className="">
-          <Card />
+          <Card name="nombre"/>
 		  </div>
 	</div>
 );

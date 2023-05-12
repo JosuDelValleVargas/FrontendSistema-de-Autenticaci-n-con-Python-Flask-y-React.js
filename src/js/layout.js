@@ -24,7 +24,7 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
 
-        Para ver las imagens de la card en https://starwars-visualguide.com/#/
+        {/* Para ver las imagens de la card en https://starwars-visualguide.com/#/ */}
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />{" "}
