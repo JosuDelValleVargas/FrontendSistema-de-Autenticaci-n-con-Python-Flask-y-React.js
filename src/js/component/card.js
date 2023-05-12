@@ -12,11 +12,11 @@ export const Card = () => {
           Some quick example text to build on the card title and make up the
           bulk of the card 's content.
         </p>
-        <div>
+        <div className="d-flex">
           <a href="#" className="btn btn-outline-primary">
             Learn more!
           </a>
-          <a href="#" className="btn btn-outline-warning ms-auto">
+          <a href="#" className="btn btn-outline-warning  ms-auto">
             <i className="fa fa-regular fa-heart "></i>
           </a>
         </div>

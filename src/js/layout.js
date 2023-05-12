@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-// prueba de guardado
+
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
@@ -23,9 +23,9 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
+
+        Para ver las imagens de la card en https://starwars-visualguide.com/#/
           <Navbar />
-          <h2 style= {{color: "red"}}>Characters</h2>
-          <Card />
           <Routes>
             <Route path="/" element={<Home />} />{" "}
             <Route path="/demo" element={<Demo />} />{" "}
