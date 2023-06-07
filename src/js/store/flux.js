@@ -30,15 +30,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 						password:userPassword
 					})
 					console.log(response);
+					if (response.status ===200){
+						localStorage.setItem("myToken", response.data.access_token)
+						return true;
+					}
 
 					return true;
 				}catch(err){
 					console.log(err);
+					if(err.response.status === 401){
 					return false;
+					}
 				}
-			
-
 			},
+
+			logout:()=>{
+				let token = localStorage.getItem("myToken")
+				console.log(token);
+				if (token === null) return false
+				localStorage.removeItem("myToken")
+				return true
+				
+			},
+
+
 
 
 
