@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -19,6 +21,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
+			login:async (userEmail,userPassword) => {
+				console.log(userEmail,userPassword);
+				try{
+					
+					let response = await axios.post ("https://josudelvallevargas-supreme-orbit-7g7rx96qv4qhgq6-3000.preview.app.github.dev/login",{
+						email:userEmail,
+						password:userPassword
+					})
+					console.log(response);
+
+					return true;
+				}catch(err){
+					console.log(err);
+					return false;
+				}
+			
+
+			},
+
+
+
+
+
 			loadSomeData: () => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
